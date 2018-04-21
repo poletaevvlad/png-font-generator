@@ -9,7 +9,7 @@ text file. The order of characters and line breaks is preserved.
 ## Usage
 
 ```
-Usage: gen-font-map.py [OPTIONS] INPUT OUTPUT
+Usage: pngfont.py [OPTIONS] INPUT OUTPUT
 
 Options:
   -f, --font TEXT                TTF font file  [required]
@@ -30,7 +30,7 @@ into `stdout`.
 ## Example
 
 ```bash
-python png-font.py input.txt out.png --font=IBMPlexMono-Medium.ttf --cell-width 16 --cell-height 24 --size 18
+python pngfont.py input.txt out.png --font=IBMPlexMono-Medium.ttf --cell-width 16 --cell-height 24 --size 18
 ```
 The contents of an input file is:
 
@@ -42,12 +42,16 @@ abcdefghijlmnopqrstuvwyz().,?!-@#^&/
 ```
 
 The resulting file `out.png` will look like follows.
+
 ![](example_output.png)
 
+The font used in this example is [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) by Mike Abbink ([OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web))
+
 ### Debug option
-In order to better align symbols insize cells you may enable debug option:
+In order to better align symbols insize the cells you may enable debug option:
 
 ```bash
-python png-font.py input.txt out.png --font=IBMPlexMono-Medium.ttf --cell-width 16 --cell-height 24 --size 18
+python pngfont.py input.txt out.png --font=IBMPlexMono-Medium.ttf --cell-width 16 --cell-height 24 --size 18 --debug --v-align top --h-align left
 ```
+
 ![](example_debug_output.png)
